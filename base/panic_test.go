@@ -2,6 +2,7 @@ package base
 
 import (
 	"fmt"
+	"math"
 	"testing"
 	"unsafe"
 )
@@ -74,6 +75,7 @@ func Div(a, b int) (res int, err error) {
 			err = fmt.Errorf("捕获到异常（%v）", r)
 		}
 	}()
+	_ = math.Sqrt(-0.01)
 	res = a / b
 	return
 }
